@@ -716,5 +716,17 @@ else{
 
   scoreTab=true;
 
+  document.getElementById('hoverBkgr').style.display='block';
+
+
+})
+
+
+document.getElementById('hoverBkgr').addEventListener('click',function(){
+  document.getElementById('hoverBkgr').style.display='none';
+
+})
+document.getElementById("popupClose").addEventListener('click',function(){
+  document.getElementById('hoverBkgr').style.display='none';
 
 })
