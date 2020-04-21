@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <link rel="icon" type='image/x-icon' href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="https://kit.fontawesome.com/4298b3fd63.js" crossorigin="anonymous"></script>
+
+    <title></title>
+  </head>
+  <body >
+    <section class="introGame">
+
+
+
+    <section id='intro'>
+    <div class="info">
+    <h1 class='intro'>Tap it faster to score more</h1>
+    </div>
+    <div class="info">
+      <p>Enter Ur Name</p>
+      <input type="text" name="" value="" id='userName' placeholder="Name" required autocomplete="off">
+    </div>
+    <div class="info" id="difficulty">
+
+    <p>Set difficulty</p>
+    <button  class='btn-success' id='easy'>Easy</button>
+    <button class='btn-warning' id='medium'>Medium</button>
+    <button class='btn-danger' id='hard'>Hard</button>
+
+
+    </div>
+
+    </section>
+
+
+
+
+    </section>
+    <section id="timerScore">
+      <div class="info time" id='timer'>
+        ⌛
+      </div>
+      <div class="info time" id='highScore'>
+        HighScore
+      </div>
+    </section>
+    <button class="btn-success" id='newGame'><i class="fas fa-redo"></i> Restart</button>
+
+<section id='gameField'>
+  <!-- <div class="info"> -->
+
+
+
+<div class="grid-container info" id='gridBase'>
+  <div class="info ins">
+    <p class='instr'>
+      Tap on the numbers in ascending order...
+      Dont forget to set the difficulty level
+      </p>
+
+    <button class='btn btn-warning' name="button" id='startGame'>Start</button>
+
+  </div>
+<!-- <div class="info countD">
+  <h1 class="count">1</h1>
+
+</div> -->
+
+
+
+  <!-- <div class="cd">
+  <h1 class="count">1</h1>
+  </div> -->
+    <!-- <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+    <div class="grid-item">7</div>
+    <div class="grid-item">8</div>
+    <div class="grid-item">9</div>
+    <div class="grid-item">10</div>
+    <div class="grid-item">11</div>
+    <div class="grid-item">12</div>
+    <div class="grid-item">13</div>
+    <div class="grid-item">14</div>
+    <div class="grid-item">15</div>
+    <div class="grid-item">16</div>
+    <div class="grid-item">17</div>
+    <div class="grid-item">18</div>
+    <div class="grid-item">19</div>
+    <div class="grid-item">20</div>
+    <div class="grid-item">21</div>
+    <div class="grid-item">22</div>
+    <div class="grid-item">23</div>
+    <div class="grid-item">24</div>
+    <div class="grid-item">25</div> -->
+  </div>
+
+  <button class='btn btn-warning' name="button" id='pause'>pause</button>
+
+
+
+</section>
+
+<section id='highScores'>
+  <div class="info">
+    <button class='btn btn-primary btn-block' id='scoreTable' name="button">View High Scores</button>
+    <div class="info" id='tableHeading'>
+
+    </div>
+  <div class="info" id='highScoreTable'>
+<table class='table' align='center' id="tableEasy">
+  <col width='100'>
+  <col width='150'>
+  <col width='150'>
+
+
+  <tbody id='easyBody'>
+
+  </tbody>
+</table>
+<table class='table' align='center' id="tableMedium">
+  <col width='100'>
+  <col width='150'>
+  <col width='150'>
+
+
+  <tbody id='mediumBody'>
+
+  </tbody>
+</table>
+<table class='table' align='center' id="tableHard">
+  <col width='100'>
+  <col width='150'>
+  <col width='150'>
+  
+  <tbody id='hardBody'>
+
+  </tbody>
+</table>
+  </div>
+  </div>
+</section>
+
+
+
+
+
+    <script src="index.js" charset="utf-8"></script>
+  </body>
+</html>

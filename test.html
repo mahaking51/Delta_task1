@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+
+    .main{
+      margin:auto;
+      height:200px;
+      width:400px;
+      overflow:hidden;
+      white-space: nowrap;
+      text-align: right;
+      border:1.5px solid grey;
+      border-radius: 0.5rem;
+    }
+      .box {
+        text-align: center;
+        background-color:black;
+        padding: 10px;
+        color:white;
+        margin:4px;
+        font-size: 1.5rem;
+      }
+      .box:hover{
+        background-color: white;
+        color:black;
+      }
+      .row1{
+        display:grid;
+        grid-template-columns: 25% 25% 25% 25% 25% 25% 25% 25%;
+        margin-top:10px;
+        animation-name: conveyer;
+        animation-duration: 10s ;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+      }
+      .row2{
+        display:grid;
+        grid-template-columns: 25% 25% 25% 25% 25% 25% 25% 25%;
+        margin-top:10px;
+        animation-name: conveyer;
+        animation-duration: 3s ;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+        animation-direction: reverse;
+      }
+      @keyframes conveyer {
+        from{transform:  translateX(-400px);}
+          to{transform:  translateX(0px);}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="row1">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+      </div>
+      <div class="row2">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+      </div>
+
+    </div>
+
+  </body>
+  <script type="text/javascript">
+    var a =document.getElementsByClassName('box');
+
+    for(let i=0;i<a.length;i++){
+      console.log(a[i].innerHTML)
+      a[i].addEventListener('click',function(){
+        var it=a[i].innerHTML;
+        for(let j=0;j<a.length;j++){
+          if(it===a[j].innerHTML){
+            a[i].innerHTML='';
+            a[j].innerHTML='';
+          }
+        }
+      })
+    }
+  </script>
+</html>
