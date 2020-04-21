@@ -249,7 +249,7 @@ font-size: 1.2rem;
   }
   .box:hover{
     background-color: white;
-    color:black;
+    color:green;
   }
   .row1{
     display:grid;
