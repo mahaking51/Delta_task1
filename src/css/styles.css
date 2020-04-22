@@ -259,6 +259,7 @@ font-size: 1.2rem;
     animation-duration: 11s ;
     animation-fill-mode: both;
     animation-iteration-count: infinite;
+    animation-timing-function: linear;
   }
   .row2{
     display:grid;
@@ -269,6 +270,7 @@ font-size: 1.2rem;
     animation-fill-mode: both;
     animation-iteration-count: infinite;
     animation-direction: reverse;
+    animation-timing-function: linear;
   }
   .row3{
     display:grid;
@@ -278,6 +280,7 @@ font-size: 1.2rem;
     animation-duration: 11s ;
     animation-fill-mode: both;
     animation-iteration-count: infinite;
+    animation-timing-function: linear;
   }
   .row4{
     display:grid;
@@ -288,6 +291,7 @@ font-size: 1.2rem;
     animation-fill-mode: both;
     animation-iteration-count: infinite;
     animation-direction: reverse;
+    animation-timing-function: linear;
   }
   .row5{
     display:grid;
@@ -297,6 +301,7 @@ font-size: 1.2rem;
     animation-duration: 11s ;
     animation-fill-mode: both;
     animation-iteration-count: infinite;
+    animation-timing-function: linear;
   }
   @keyframes conveyer {
     from{transform:  translateX(-500px);}
@@ -362,58 +367,3 @@ font-size: 1.2rem;
       font-weight: bold;
   }
   /* Popup box END */
-
-
-
-
-@media (max-width:600px){
-  #timerScore{
-    width:100%;
-  }
-  .intro{
-    margin-top: 30px;
-    margin-left:auto;
-    text-align: center;
-    font-family: 'Shadows Into Light', cursive;
-  }
-
-  #difficulty{
-    text-align: center;
-  }
-  h2{
-    margin:auto;
-    margin-left:100%;
-  }
-  .count{
-    margin-right:100%;
-    margin-top: 0
-  }
-  .cd{
-font-family: 'Playfair Display SC', serif;
-font-size: 10rem;
-
-  }
-
-  .instr{
-    width:300%;
-    margin-top: 40px;
-    margin-left: 100%;
-    font-size:1.5rem;
-  }
-  #startGame{
-    margin-left: 215%;
-    font-size:1.5rem;
-  }
-  #gridBase{
-    width:75%;
-    height:75%;
-  }
-  #highScore{
-    margin-left: 15px;
-  }
-  .count{
-    margin-right:100%;
-    font-size: 5rem;
-    padding:0;
-  }
-}
