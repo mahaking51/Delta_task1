@@ -21,6 +21,33 @@ td{
 .intro{
   font-family: 'Shadows Into Light', cursive;
   font-size:3rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#submit{
+  background-color: #424874;
+  border-color: #424874;
+  width:30%;
+}
+#submit:hover{
+  background-color: #413c69;
+  border-color: #413c69;
+}
+.form-control {
+  display: inline;
+  width: 5%;
+  text-align: center;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 input{
   text-align: center;
@@ -32,9 +59,15 @@ input{
   line-height: inherit;
 
 }
+.scoreD{
+  width:200%;
+}
 h2{
   margin:auto;
-  margin-left:210%;
+  /* margin-left:0; */
+  position: relative;
+  font-size: 5rem;
+  margin-left: 50%;
 }
 
 table{
@@ -44,6 +77,7 @@ table{
 }
 .introGame{
   background-image: url("Above Clouds.png");
+  background-repeat: no-repeat;
 }
 .info {
   width:100%;
@@ -131,10 +165,18 @@ button {
 .count{
   font-size:6rem;
   font-family: 'Shadows Into Light', cursive;
-  margin:0;
+  margin:auto;
+  margin-left:235%;
+  /* margin:0; */
 }
+/* .countTimer{
+  margin:auto;
+  margin-left:100%;
+} */
+
 .countD{
-  margin-left:195%;
+  margin:auto;
+  margin-left: 50%;
 }
 
 .scrollMenu {
@@ -196,7 +238,7 @@ font-size: 1.2rem;
 
 }
 .btn{
-  margin-top: 20px;
+  margin-top: 2px;
 }
 
 .btn-warning {
@@ -225,8 +267,7 @@ font-size: 1.2rem;
 
 .main{
   display: grid;
-  grid-template-rows: 20% 20% 20% 20% 20%;
-
+  /* grid-template-rows: 20% 20% 20% 20% 20%; */
   margin:auto;
   margin-top: 75px;
   height:340px;
@@ -253,7 +294,7 @@ font-size: 1.2rem;
   }
   .row1{
     display:grid;
-    grid-template-columns: 25% 25% 25% 25% 25% 25% 25% 25%;
+    /* grid-template-columns: 33% 33% 33% 33% 33% 33% ; */
     margin-top:10px;
     animation-name: conveyer;
     animation-duration: 11s ;
@@ -272,7 +313,7 @@ font-size: 1.2rem;
     animation-direction: reverse;
     animation-timing-function: linear;
   }
-  .row3{
+  /* .row3{
     display:grid;
     grid-template-columns: 25% 25% 25% 25% 25% 25% 25% 25%;
     margin-top:10px;
@@ -302,7 +343,7 @@ font-size: 1.2rem;
     animation-fill-mode: both;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-  }
+  } */
   @keyframes conveyer {
     from{transform:  translateX(-500px);}
       to{transform:  translateX(0px);}

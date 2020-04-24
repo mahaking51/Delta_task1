@@ -10,17 +10,18 @@ var flag=false;
 var paused=false;//to determine if the game is paused
 var st=false;//to determine if the game has begun
 var scoreTab=false;//to know if clicked on highscores
+var submitHit=false; //to know if the user has clicked submit
 let score;
 var startCountDown=false;
 var countdown;
-var diff='';
 var easyUsers=[];
 var mediumUsers=[];
 var hardUsers=[];
 var buttonTap=new Audio("public/sounds/Button_Press_3-Marianne_Gagnon-771871963.mp3");
 var wrongTap=new Audio("public/sounds/wrong-buzzer.mp3");
-
-
+var row;
+var col;
+var name;
 
 gridNumbers=shuffle(gridNumbers);
 gridNumbersMed=shuffle(gridNumbersMed);
@@ -32,36 +33,37 @@ var mediumUsers = JSON.parse(localStorage.getItem("mediumUsers") || "[]");
 var hardUsers = JSON.parse(localStorage.getItem("hardUsers") || "[]");
 
 
-// setting difficulty levels
-document.getElementById('easy').addEventListener('click',function(){
-  diff='easy';
-  document.getElementById('difficulty').innerHTML='<h3>Difficulty set to Easy</h3>';
-  if(easyUsers.length>0){
-  document.getElementById('highScore').innerHTML='High Score:'+easyUsers[0].score;
-  }
 
+document.getElementById("submit").addEventListener('click',function(){
+  name=document.getElementById('userName').value;
+  row=document.getElementById('inputRow').value;
+  col=document.getElementById('inputCol').value;
+  scroll=document.getElementById('scrollCheck').checked;
+  if(name===''||row==='row'||col==='col'){
+    alert('enter valid inputs');
+  }
+  else{
+
+  submitHit=true;
+  if(scroll){
+    document.getElementById('userDetails').innerHTML='<div class="userInput info">\
+                                                      <p class="userIntro">Hey '+name+'! <br> You will be playing a grid of '+row+' X '+col+',with rows moving horizontally</p>\
+                                                      </div>'
+  }
+  else{
+  document.getElementById('userDetails').innerHTML='<div class="userInput info">\
+                                                    <p class="userIntro">Hey '+name+'! <br> You will be playing a grid of '+row+' X '+col+'</p>\
+                                                    </div>'
+}
+}
 })
 
-document.getElementById('medium').addEventListener('click',function(){
-  diff='medium';
-  document.getElementById('difficulty').innerHTML='<h3>Difficulty set to Medium</h3>';
-  if(mediumUsers.length>0){
-    document.getElementById('highScore').innerHTML='High Score:'+mediumUsers[0].score;
-
-  }
-})
-
-document.getElementById('hard').addEventListener('click',function(){
-  diff='hard';
-  document.getElementById('difficulty').innerHTML='<h3>Difficulty set to Hard</h3>';
-  if(hardUsers.length>0){
-    document.getElementById('highScore').innerHTML='High Score:'+hardUsers[0].score;
-  }
-})
 
 document.getElementById("newGame").addEventListener('click',function(){
   window.location.reload();
 })
+
+
 document.getElementById("pause").style.visibility="hidden";
 document.getElementById('scoreTable').style.visibility='visible';
 
@@ -71,12 +73,12 @@ document.getElementById('tableHard').style.visibility='hidden';
 
 //
 document.getElementById("startGame").addEventListener('click',function(){
-  var nameInput=document.getElementById('userName').value;
-  if(nameInput==='' || diff===''){
+  console.log(scroll);
+
+  if(!submitHit){
     alert('Fill the details above');
   }
   else{
-
     countdown=setInterval(countDown,1000);
     st=true;
   }
@@ -132,9 +134,7 @@ function countDown(){
   document.getElementById("pause").style.visibility="visible";
   if(!paused){
     startCountDown=true;
-document.getElementById("gridBase").innerHTML = '<div class="info countD">\
-                                                <h1 class="count" style="font-size:6rem">'+ti+'</h1>\
-                                                </div>' ;
+document.getElementById("gridBase").innerHTML = '<h1 class="count" style="font-size:6rem">'+ti+'</h1>' ;
 
 if(ti===0){
   ti=4;

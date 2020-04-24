@@ -51,13 +51,20 @@ font-size: 10rem;
   #newGame{
     margin-left:50%;
   }
-  #main{
-    width:80%;
-  }
+
   table{
   width:100%;
   }
   input{
     width:80%;
+  }
+  #inputRow{
+    width:10%;
+  }
+  #inputCol{
+    width:10%;
+  }
+  h2{
+    font-size:2rem;
   }
 }
