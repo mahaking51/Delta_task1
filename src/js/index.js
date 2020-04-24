@@ -39,6 +39,7 @@ document.getElementById("submit").addEventListener('click',function(){
   for(var k =1;k<col*row+1;k++){
     gridNumbers.push(k);
   }
+  console.log(gridNumbers);
   gridNumbers=shuffle(gridNumbers);
   if(name===''||row==='row'||col==='col'){
     alert('enter valid inputs');
