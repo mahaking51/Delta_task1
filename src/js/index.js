@@ -2,8 +2,7 @@ var sec=0;
 var milliSec=0;
 var ti=3;
 var t;
-var gridNumbers=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
-var gridNumbersMed=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];
+var gridNumbers=[];
 var count=1;
 var a;
 var flag=false;
@@ -23,8 +22,6 @@ var row;
 var col;
 var name;
 
-gridNumbers=shuffle(gridNumbers);
-gridNumbersMed=shuffle(gridNumbersMed);
 var con=localStorage.getItem('condition');
 
 
@@ -39,6 +36,10 @@ document.getElementById("submit").addEventListener('click',function(){
   row=document.getElementById('inputRow').value;
   col=document.getElementById('inputCol').value;
   scroll=document.getElementById('scrollCheck').checked;
+  for(var k =1;k<col*row+1;k++){
+    gridNumbers.push(k);
+  }
+  gridNumbers=shuffle(gridNumbers);
   if(name===''||row==='row'||col==='col'){
     alert('enter valid inputs');
   }
